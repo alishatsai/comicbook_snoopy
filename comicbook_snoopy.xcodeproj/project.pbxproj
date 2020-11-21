@@ -13,6 +13,7 @@
 		6D81EC69255A0B6D0033CD7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D81EC67255A0B6D0033CD7E /* Main.storyboard */; };
 		6D81EC6B255A0B730033CD7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D81EC6A255A0B730033CD7E /* Assets.xcassets */; };
 		6D81EC6E255A0B730033CD7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D81EC6C255A0B730033CD7E /* LaunchScreen.storyboard */; };
+		6D81EC77255ADACB0033CD7E /* jf-openhuninn-1.1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D81EC76255ADACB0033CD7E /* jf-openhuninn-1.1.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6D81EC6A255A0B730033CD7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D81EC6D255A0B730033CD7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D81EC6F255A0B730033CD7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D81EC76255ADACB0033CD7E /* jf-openhuninn-1.1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jf-openhuninn-1.1.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				6D81EC61255A0B6D0033CD7E /* AppDelegate.swift */,
+				6D81EC76255ADACB0033CD7E /* jf-openhuninn-1.1.ttf */,
 				6D81EC63255A0B6D0033CD7E /* SceneDelegate.swift */,
 				6D81EC65255A0B6D0033CD7E /* ViewController.swift */,
 				6D81EC67255A0B6D0033CD7E /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D81EC6E255A0B730033CD7E /* LaunchScreen.storyboard in Resources */,
+				6D81EC77255ADACB0033CD7E /* jf-openhuninn-1.1.ttf in Resources */,
 				6D81EC6B255A0B730033CD7E /* Assets.xcassets in Resources */,
 				6D81EC69255A0B6D0033CD7E /* Main.storyboard in Resources */,
 			);

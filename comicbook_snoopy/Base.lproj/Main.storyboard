@@ -1,24 +1,1395 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pzg-qj-6TT">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="jf-openhuninn-1.1.ttf">
+            <string>jf-openhuninn-1.1</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--書封-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="書封" id="BYZ-38-t0r" customClass="ViewController" customModule="comicbook_snoopy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Woodstock1" translatesAutoresizingMaskIntoConstraints="NO" id="tby-QY-e1d">
+                                <rect key="frame" x="60" y="169" width="270" height="463"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am the Boss!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGk-Cj-mgB">
+                                <rect key="frame" x="60" y="595" width="273" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GLY-Av-B3v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1669" y="-589"/>
+        </scene>
+        <!--漫畫清單-->
+        <scene sceneID="Una-mg-hEx">
+            <objects>
+                <tableViewController title="漫畫清單" id="tGF-J8-6Sl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tjZ-jm-x1B">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="WvX-fa-giS">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="H5a-f7-15H">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5a-f7-15H" id="iQA-Ng-DdB">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki3-Bu-egg">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep1封面" translatesAutoresizingMaskIntoConstraints="NO" id="jOx-T1-UQ8">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KiO-T7-Rdu" kind="show" id="TAT-6u-Fdy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="mVt-uU-Yfj">
+                                        <rect key="frame" x="0.0" y="203" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mVt-uU-Yfj" id="qw5-My-sgP">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ3-hA-sl4">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep2封面" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-bx-Y2g">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="81o-uh-zka" kind="show" id="NQi-1k-dhu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="GEV-ow-2GM">
+                                        <rect key="frame" x="0.0" y="378" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GEV-ow-2GM" id="tLf-sM-Ll5">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6x-PT-14L">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep3封面" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-ej-QnX">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aoy-xx-wTc" kind="show" id="WMH-At-7Xq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="6Vk-WY-ybq">
+                                        <rect key="frame" x="0.0" y="553" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vk-WY-ybq" id="JIb-5K-G7O">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQt-rC-n8I">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4封面" translatesAutoresizingMaskIntoConstraints="NO" id="5wl-Gu-5QW">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L3y-az-tfg" kind="show" id="3a5-DL-hwc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="N8H-14-bvF">
+                                        <rect key="frame" x="0.0" y="728" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N8H-14-bvF" id="k4j-if-MXu">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3n-uY-6Q8">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep5封面" translatesAutoresizingMaskIntoConstraints="NO" id="941-dm-dhx">
+                                                    <rect key="frame" x="41" y="24" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qYX-Lp-MRQ" kind="show" id="365-1n-i4D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="WEa-Eg-gfO">
+                                        <rect key="frame" x="0.0" y="903" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WEa-Eg-gfO" id="kbV-XR-zYF">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pek-IE-lMh">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep6封面" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-S7-snv">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="kvn-Ew-uZw" kind="show" id="4fc-oG-9yM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="Ebk-aj-0pO">
+                                        <rect key="frame" x="0.0" y="1078" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ebk-aj-0pO" id="heh-NC-VHS">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 7" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fY2-9O-Hfi">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep7封面" translatesAutoresizingMaskIntoConstraints="NO" id="8sg-Tu-ma1">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="A3L-94-w1a" kind="show" id="2nR-bN-3wZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="175" id="9e2-KO-257">
+                                        <rect key="frame" x="0.0" y="1253" width="390" height="175"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9e2-KO-257" id="w92-Sw-KKx">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="175"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode 8" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz9-OX-Pie">
+                                                    <rect key="frame" x="205" y="77" width="136" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep8封面" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-C3-B1r">
+                                                    <rect key="frame" x="41" y="22" width="127" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xpd-Eg-dQ6" kind="show" id="Rfa-7f-PUo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tGF-J8-6Sl" id="1cB-CM-zPE"/>
+                            <outlet property="delegate" destination="tGF-J8-6Sl" id="EAG-pm-tPb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Znc-0W-T4k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-7O-CZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-909" y="1049"/>
+        </scene>
+        <!-- Episode1-->
+        <scene sceneID="6Z0-Uf-2k1">
+            <objects>
+                <viewController title=" Episode1" id="KiO-T7-Rdu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OQm-Rg-jQg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-0w-q8Q">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Xrm-nv-6SX">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="1440"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep1-1" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-tJ-1sF">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep1-2" translatesAutoresizingMaskIntoConstraints="NO" id="dbF-yz-YXU">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep1-3" translatesAutoresizingMaskIntoConstraints="NO" id="i6k-KE-6Z4">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep1-4" translatesAutoresizingMaskIntoConstraints="NO" id="cTe-f8-DGV">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="ONg-ck-Rop"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="H41-va-IDz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6MB-PP-osC"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q40-nH-rpb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dmy-d4-xdJ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPT-GI-RmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38.46153846153846" y="1048.5781990521327"/>
+        </scene>
+        <!--導覽列-->
+        <scene sceneID="dJt-2f-GsB">
+            <objects>
+                <tabBarController title="導覽列" automaticallyAdjustsScrollViewInsets="NO" id="pzg-qj-6TT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ABA-gw-Yf4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DMQ-c7-Y8D" kind="relationship" relationship="viewControllers" id="bap-eA-0PV"/>
+                        <segue destination="sU8-dZ-ajs" kind="relationship" relationship="viewControllers" id="luo-IL-3K7"/>
+                        <segue destination="Lu8-yL-CWk" kind="relationship" relationship="viewControllers" id="EFb-4w-wiO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4l-2H-qUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284.05797101449275" y="-589.28571428571422"/>
+        </scene>
+        <!--封面導覽列-->
+        <scene sceneID="nWz-ff-W1S">
+            <objects>
+                <navigationController title="封面導覽列" automaticallyAdjustsScrollViewInsets="NO" id="DMQ-c7-Y8D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="封面" image="book.closed.fill" catalog="system" id="5ZS-3Z-d9F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TvQ-PR-JKE">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="D3N-RM-1Z6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBA-d9-FOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-589"/>
+        </scene>
+        <!--角色-->
+        <scene sceneID="7j7-Vw-snO">
+            <objects>
+                <tableViewController id="sU8-dZ-ajs" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0fF-7D-r0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Rns-R7-Mqt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="fMY-iQ-YlZ" userLabel="woodstock">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fMY-iQ-YlZ" id="gCk-iV-hcj">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Woodstock2" translatesAutoresizingMaskIntoConstraints="NO" id="2Nh-PI-GWD">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYI-Qr-5Tx">
+                                                    <rect key="frame" x="200" y="59" width="110" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Woodstock
+糊塗塌克</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="FXs-1X-XUO" kind="show" id="zHY-0n-T5n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="axH-vx-GUm" userLabel="snoopy">
+                                        <rect key="frame" x="0.0" y="187" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axH-vx-GUm" id="UH8-jr-g9n">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Snoopy" translatesAutoresizingMaskIntoConstraints="NO" id="1Wf-Y3-NRa">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vy-21-wwM">
+                                                    <rect key="frame" x="200" y="59" width="74" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Snoopy
+史努比</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IMe-lj-tMA" kind="show" id="Dq2-D8-ch5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="6BV-2T-IK8" userLabel="charlie">
+                                        <rect key="frame" x="0.0" y="346" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6BV-2T-IK8" id="VH2-ng-a3E">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Charlie" translatesAutoresizingMaskIntoConstraints="NO" id="oln-3X-W1X">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-VO-pzj">
+                                                    <rect key="frame" x="200" y="59" width="137" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Charlie Brown
+查理.布朗</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VOu-e1-qrm" kind="show" id="Yeo-fp-an6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="3i5-XI-bX7" userLabel="sally">
+                                        <rect key="frame" x="0.0" y="505" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3i5-XI-bX7" id="CVq-PN-Fyz">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sally" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-7N-dZk">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ky-0z-Sqp">
+                                                    <rect key="frame" x="200" y="59" width="115" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Sally Brown
+莎利.布朗</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lTC-KX-gIi" kind="show" id="hEQ-hN-5Us"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="Lb9-VI-Xt1" userLabel="Lucy">
+                                        <rect key="frame" x="0.0" y="664" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lb9-VI-Xt1" id="ZZd-O6-WH3">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lucy" translatesAutoresizingMaskIntoConstraints="NO" id="q86-TG-8Hi">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op7-fz-iV7">
+                                                    <rect key="frame" x="200" y="59" width="132" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Lucy van Pelt
+露西.潘貝魯特</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Frp-kO-3OK" kind="show" id="W8k-fs-Z9G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="159" id="drF-nJ-5Fe" userLabel="Linus">
+                                        <rect key="frame" x="0.0" y="823" width="390" height="159"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="drF-nJ-5Fe" id="xue-mp-S0h">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Linus" translatesAutoresizingMaskIntoConstraints="NO" id="0rT-bv-Qxh">
+                                                    <rect key="frame" x="0.0" y="20" width="201" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHu-sO-o16">
+                                                    <rect key="frame" x="200" y="59" width="153" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Linus van Pelt	
+奈勒斯.潘貝魯特</string>
+                                                    <fontDescription key="fontDescription" name="jf-openhuninn-1.1" family="jf-openhuninn-1.1" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qgN-M4-xJM" kind="show" id="ya3-Jg-mlE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sU8-dZ-ajs" id="G9f-Od-gsr"/>
+                            <outlet property="delegate" destination="sU8-dZ-ajs" id="3aV-ks-kiM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="角色" image="person.crop.square" catalog="system" id="Dns-xD-mLF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3d2-G5-ZTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="240"/>
+        </scene>
+        <!--Woodstock-->
+        <scene sceneID="v8k-M8-pl6">
+            <objects>
+                <viewController title="Woodstock" id="FXs-1X-XUO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iXU-dm-Jfd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Woodstock2" translatesAutoresizingMaskIntoConstraints="NO" id="wSH-nQ-Q5E">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pw0-7c-doT">
+                                <rect key="frame" x="38" y="276" width="310" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★史努比最好的朋友
+
+▲不喜歡每年冬天飛到南方過冬
+
+糊塗塌客雖然是隻小鳥，不過卻有旺盛的鬥志。在《Race for Your Life, Charlie Brown》中，糊塗塌客機智的贏得泛舟比賽，而其他的競爭者都被淘汰。糊塗塌客一般會對史努比的言語攻擊或惡作劇泰然處之，不過若史努比太過份了，糊塗塌客也會反擊。有一次糊塗塌客不和史努比說話，因為史努比要以「一天讀一個字」的速度讀戰爭與和平。但是當史努比聽到糊塗塌客被隔壁的貓攻擊時，史努比立刻衝去要救牠(結果被貓打得很慘)，後來才發現「被貓攻擊的鳥」其實是一個黃色的手套。  糊塗塌客討厭別人弄錯它的品種（不過讀者也從來不知道糊塗塌客的品種）。  糊塗塌客不太願意吃灑在地上的面包屑，因為它不想讓別人認為它在接受社會救助。當在人口普查時問到它從史努比處得的淨收入多少，糊塗塌客問答「一天四條小蟲」。
+
+史努比一直很好奇糊塗塌客是哪一品種的鳥，有一次史努比想要配合圖鑑，試著識別糊塗塌客的品種，因此要糊塗塌客模仿包括乌鸦、加拿大雁在內的許多種鳥類。最後史努比放棄了，對糊塗塌客說：「以我所知道的來看，你是一隻鴨子」，讓糊塗塌客很傷心，最後史努比擁抱糊塗塌客。所以可以清楚的看出糊塗塌客的品種不重要，唯一重要的是糊塗塌客是史努比的好朋友。 
+糊塗塌客雖然是隻小鳥，不過卻有旺盛的鬥志。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Woodstock 糊塗塌克 ♂︎" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-to-7Nd">
+                                <rect key="frame" x="61" y="200" width="268" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zLr-xT-y3f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tax-6L-F8Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02d-CX-kEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="240"/>
+        </scene>
+        <!--漫畫-->
+        <scene sceneID="7yc-XC-Kvs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lu8-yL-CWk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="漫畫" image="book.fill" catalog="system" id="oev-IK-L0E"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1oM-lx-eln">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tGF-J8-6Sl" kind="relationship" relationship="rootViewController" id="mio-gC-i4U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2r-Ug-rV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-909" y="240"/>
+        </scene>
+        <!--Snoopy-->
+        <scene sceneID="qHZ-gQ-obM">
+            <objects>
+                <viewController title="Snoopy" id="IMe-lj-tMA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOT-Xo-i02">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Snoopy" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-ZZ-H65">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-a8-Be1">
+                                <rect key="frame" x="38" y="276" width="310" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★黑白花色的小獵犬
+
+▲不能說人話
+
+史努比的主人是查理·布朗，不過因為史努比老是記不起他的名字，在心裡都直接以「圓頭小子」（The Round-Headed Kid）來稱呼對方。雖然史努比有時會在查理·布朗面前展現出對他毫不在乎的一面，但史努比會在查理·布朗失落或遭遇困難時願意伸出援手，並且會在每天的餵飯時間向查理·布朗展現出牠內心的期待與興奮。
+
+史努比會戴著太陽眼鏡，想像自己是一位行為舉止迷人、名為「酷哥喬」（Joe Cool）的大學生。
+
+史努比也會以「世界著名作家」（World Famous Author）自居，把打字機搬到狗屋上來嘗試編寫小說，不過文章開頭第一句幾乎都是「這是一個黑暗的暴風雨夜晚」（It was a dark and stormy night）
+
+而對於史努比這種喜愛角色扮演的行為，作者舒茲表示著：「史努比為了生活需要逃避到自己的幻想世界裡，不然他只能過著單調又悲慘的日子。狗的生活不是好過的。」</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snoopy 史努比 ♂︎" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwL-2r-6sh">
+                                <rect key="frame" x="61" y="200" width="268" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9FE-91-tkd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R0l-sg-In6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLD-QO-wkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960" y="240"/>
+        </scene>
+        <!--Charlie-->
+        <scene sceneID="Wjd-I8-fqE">
+            <objects>
+                <viewController title="Charlie" id="VOu-e1-qrm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j5J-vy-EWV">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Charlie" translatesAutoresizingMaskIntoConstraints="NO" id="3Ae-6t-prE">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f0d-dR-VRM">
+                                <rect key="frame" x="38" y="276" width="310" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★常穿著鋸齒形圖案T恤的光頭小男孩
+
+▲老是遇到不如意的狀況
+
+為一位個性憨厚、溫和、沒有特別自信的老好人（Good Ol'），他雖然在事情上盡力而為，但總是遭遇到失敗。他時常面臨到在棒球比賽上的挫敗，或是朋友之間對他行為上的嘲笑，以及陷入對於他心中暗戀對象紅髮女孩的煩惱裡。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Charlie Brown 查理.布朗 ♂︎" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-ig-OoZ">
+                                <rect key="frame" x="61" y="200" width="268" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ilo-ti-we4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sf9-9C-l4v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otB-Gq-dpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="240"/>
+        </scene>
+        <!--Sally-->
+        <scene sceneID="XWq-Jc-UgX">
+            <objects>
+                <viewController title="Sally" id="lTC-KX-gIi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bQm-Lk-4TB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sally" translatesAutoresizingMaskIntoConstraints="NO" id="TdR-yN-dvL">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A17-Xg-cea">
+                                <rect key="frame" x="38" y="276" width="310" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★查理布朗的妹妹 
+▲討厭奈勒斯
+
+曾經暗戀奈勒斯，但被查理布朗制止。
+個性剛強，她具有能和學校的牆壁說話的特技 (!?)還有，每次都以有異想天開的言論出現而聞名。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sally Browng 莎莉.布朗 ♀︎" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXN-qc-QPc">
+                                <rect key="frame" x="61" y="200" width="268" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TB8-b8-0pn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rea-3Z-F8Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEZ-OT-EjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3374" y="240"/>
+        </scene>
+        <!--Lucy-->
+        <scene sceneID="bD8-aV-3An">
+            <objects>
+                <viewController title="Lucy" id="Frp-kO-3OK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3TI-5O-73G">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lucy" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-lg-1dK">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-c7-nzV">
+                                <rect key="frame" x="38" y="276" width="310" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★奈勒斯的姊姊
+
+▲不喜歡弟弟奈勒斯 
+露西的個性可以用「捉弄人的糖蜜」來形容。她的個性活潑，有強烈的支配慾，喜歡抱怨，處事大驚小怪，常常捉弄查理布朗和奈勒斯。  因為她大驚小怪的個性，所以在漫畫中她參加了多場「大驚小怪」競賽，並獲得多次大驚小怪冠軍，家裡有滿滿的獎盃。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-22-6xT">
+                                <rect key="frame" x="61" y="189" width="268" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Lucy van Pelt
+露西.潘貝魯特 ♀︎</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f5g-Jj-F4R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sJD-J8-BhP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tow-6W-IGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4849" y="240"/>
+        </scene>
+        <!--Linus-->
+        <scene sceneID="3dN-bU-ZH3">
+            <objects>
+                <viewController title="Linus" id="qgN-M4-xJM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CL4-iM-JWD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Linus" translatesAutoresizingMaskIntoConstraints="NO" id="VNk-yb-ArB">
+                                <rect key="frame" x="75" y="44" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-Mz-ToF">
+                                <rect key="frame" x="38" y="276" width="310" height="465"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">★露西的弟弟
+
+▲有吸手指和拿毛毯的毛病
+
+奈勒斯的姐姐露西很討厭看到他高興，於是經常設法阻止他玩得開心。  奈勒斯通曉聖經故事，與查理布朗的對話常常引用聖經，在漫畫中的形象定位是賢者，也因此奈勒斯與露西之間經常出現「賢者有時受迫於武力」的場面。 
+奈勒斯經常以哥哥的身份，教導查理布朗的妹妹莎莉·布朗，于是成為莎莉·布朗的暗戀對象，而奈勒斯則為莎莉布朗的表態而尷尬不已。  奈勒斯有兩次暗戀他人的經驗，一次是坐在後邊的一位女生，但因對方：「你大我三個月，追我不會太老嗎」而被嚇退，另一次則是仰慕班上的代課老師，在教師抗議的下雨天中，熱情的帶湯去支持慰問，勇敢地在老師摔倒時幫她舉標語，最後因她離開而告終。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwl-2M-xiW">
+                                <rect key="frame" x="61" y="186" width="268" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Linus van Pelt 
+奈勒斯.潘貝魯特 ♂︎</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rfP-3a-Jt1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gD4-2G-mGx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErA-vf-cGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4114" y="240"/>
+        </scene>
+        <!-- Episode2-->
+        <scene sceneID="uaQ-Zb-Ybk">
+            <objects>
+                <viewController title=" Episode2" id="81o-uh-zka" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T1f-oF-tS3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mno-bQ-ZeD">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="tbC-b1-08R">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1380"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep2-1" translatesAutoresizingMaskIntoConstraints="NO" id="SGm-ij-ELf">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep2-2" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-JG-Ho0">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep2-3" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-qk-IL4">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep2-4" translatesAutoresizingMaskIntoConstraints="NO" id="l4N-e8-iTF">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Lxa-6h-Drt"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="FFx-n0-ojV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="igG-vt-aGr"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PfI-Br-ZLB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ojz-DM-mcx"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icd-5R-sYq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664.61538461538464" y="1048.5781990521327"/>
+        </scene>
+        <!-- Episode5-->
+        <scene sceneID="ju9-Fq-Rdm">
+            <objects>
+                <viewController title=" Episode5" id="qYX-Lp-MRQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yOm-vS-acY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWX-1A-rPU">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="2au-XT-i73">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1440"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep5-1" translatesAutoresizingMaskIntoConstraints="NO" id="wXw-6z-Apx">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep5-2" translatesAutoresizingMaskIntoConstraints="NO" id="cNo-9e-D7u">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep5-3" translatesAutoresizingMaskIntoConstraints="NO" id="um5-yC-NPA">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep5-4" translatesAutoresizingMaskIntoConstraints="NO" id="ioT-M6-4PC">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="D5c-2Q-KfP"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mkB-xB-8g0"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sap-PB-Aod"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c8H-zF-J65"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zT7-lQ-F2n"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nD-gh-0Xr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3014" y="1049"/>
+        </scene>
+        <!-- Episode8-->
+        <scene sceneID="s80-TD-hza">
+            <objects>
+                <viewController title=" Episode8" id="xpd-Eg-dQ6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6tC-9Z-LJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-Vs-bCC">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Fyb-PV-I23">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1440"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep8-1" translatesAutoresizingMaskIntoConstraints="NO" id="pz7-kj-spk">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep8-2" translatesAutoresizingMaskIntoConstraints="NO" id="nlH-sB-WU9">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep8-3" translatesAutoresizingMaskIntoConstraints="NO" id="zH1-Z0-XXA">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep8-4" translatesAutoresizingMaskIntoConstraints="NO" id="xPj-Fq-ZoE">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="L8W-Bz-9J1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="iYR-LI-QAO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Mvt-Bd-FZM"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OI7-3F-zwH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WDh-w7-xcd"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjE-VY-p4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5251" y="1049"/>
+        </scene>
+        <!-- Episode6-->
+        <scene sceneID="HCh-mY-yYB">
+            <objects>
+                <viewController title=" Episode6" id="kvn-Ew-uZw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TSZ-gw-yWG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stD-hT-pmF">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="JKP-bx-CL9">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1440"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep6-1" translatesAutoresizingMaskIntoConstraints="NO" id="5uy-w7-0oG">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep6-2" translatesAutoresizingMaskIntoConstraints="NO" id="K9c-Qf-Q6O">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep6-3" translatesAutoresizingMaskIntoConstraints="NO" id="G9s-uK-n0S">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep6-4" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-KH-cnR">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="wPr-m1-FEh"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RXq-je-zf3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="UAj-Sb-LNq"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kB4-f3-4wk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t1m-yD-4Xk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsE-hw-je3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3768" y="1049"/>
+        </scene>
+        <!-- Episode3-->
+        <scene sceneID="nRZ-4D-fqy">
+            <objects>
+                <viewController title=" Episode3" id="aoy-xx-wTc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lnp-ru-EGl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cn8-jz-DOe">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="c5b-4A-Cn1">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1380"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep3-1" translatesAutoresizingMaskIntoConstraints="NO" id="bxU-bc-1Qu">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep3-2" translatesAutoresizingMaskIntoConstraints="NO" id="epf-Iq-9co">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep3-3" translatesAutoresizingMaskIntoConstraints="NO" id="4Tp-GY-Rju">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep3-4" translatesAutoresizingMaskIntoConstraints="NO" id="s2R-9r-O7K">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="dyB-Up-MLW"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4E5-tr-uxz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="3Iu-nr-ihb"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WDS-bp-Ty7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2uR-Od-bch"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2S-TE-T8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="1049"/>
+        </scene>
+        <!-- Episode4-->
+        <scene sceneID="gKM-x5-DNR">
+            <objects>
+                <viewController title=" Episode4" id="L3y-az-tfg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ySm-yr-b6t">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GCr-Wk-0Pa">
+                                <rect key="frame" x="30" y="312" width="330" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="37T-Mg-KE4">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1500"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-1" translatesAutoresizingMaskIntoConstraints="NO" id="W70-7K-bgS">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-2" translatesAutoresizingMaskIntoConstraints="NO" id="scH-jW-Jgq">
+                                                <rect key="frame" x="0.0" y="250" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-3" translatesAutoresizingMaskIntoConstraints="NO" id="0mh-15-bZa">
+                                                <rect key="frame" x="0.0" y="500" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-4" translatesAutoresizingMaskIntoConstraints="NO" id="eMm-Ay-rel">
+                                                <rect key="frame" x="0.0" y="750" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-5" translatesAutoresizingMaskIntoConstraints="NO" id="IJ4-ci-KsJ">
+                                                <rect key="frame" x="0.0" y="1000" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep4-6" translatesAutoresizingMaskIntoConstraints="NO" id="5ke-rt-XNd">
+                                                <rect key="frame" x="0.0" y="1250" width="330" height="220"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="W4v-Ow-sTl"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vSk-Ro-4aV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8lw-l7-uVS"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1500"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ekG-2F-0tp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aiD-um-VXA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTH-kn-GZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2256.9230769230767" y="1048.5781990521327"/>
+        </scene>
+        <!-- Episode7-->
+        <scene sceneID="iBR-CO-imx">
+            <objects>
+                <viewController title=" Episode7" id="A3L-94-w1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbK-Ab-igm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhF-Xw-GQk">
+                                <rect key="frame" x="30" y="257" width="330" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="Vef-Ok-GQ0">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1440"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep7-1" translatesAutoresizingMaskIntoConstraints="NO" id="JlO-dv-5Fj">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep7-2" translatesAutoresizingMaskIntoConstraints="NO" id="hXO-2q-oVB">
+                                                <rect key="frame" x="0.0" y="360" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep7-3" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-TT-l8f">
+                                                <rect key="frame" x="0.0" y="720" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ep7-4" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-KY-pkV">
+                                                <rect key="frame" x="0.0" y="1080" width="330" height="330"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="YWB-VT-Rcx"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Agk-5d-pmB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Fcl-W2-ZdW"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1440"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jfn-pf-BGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i0L-y0-vMN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMU-jH-Sdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4498" y="1049"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Charlie" width="213" height="237"/>
+        <image name="Linus" width="502" height="558"/>
+        <image name="Lucy" width="502" height="558"/>
+        <image name="Sally" width="450" height="754"/>
+        <image name="Snoopy" width="476" height="471"/>
+        <image name="Woodstock1" width="230" height="270"/>
+        <image name="Woodstock2" width="640" height="796"/>
+        <image name="book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="ep1-1" width="328" height="355"/>
+        <image name="ep1-2" width="328" height="355"/>
+        <image name="ep1-3" width="315" height="355"/>
+        <image name="ep1-4" width="343" height="355"/>
+        <image name="ep1封面" width="84" height="94"/>
+        <image name="ep2-1" width="343" height="344"/>
+        <image name="ep2-2" width="349" height="344"/>
+        <image name="ep2-3" width="350" height="344"/>
+        <image name="ep2-4" width="350" height="344"/>
+        <image name="ep2封面" width="154" height="154"/>
+        <image name="ep3-1" width="335" height="334"/>
+        <image name="ep3-2" width="335" height="334"/>
+        <image name="ep3-3" width="335" height="334"/>
+        <image name="ep3-4" width="335" height="334"/>
+        <image name="ep3封面" width="124" height="130"/>
+        <image name="ep4-1" width="357" height="228"/>
+        <image name="ep4-2" width="361" height="228"/>
+        <image name="ep4-3" width="357" height="228"/>
+        <image name="ep4-4" width="354" height="228"/>
+        <image name="ep4-5" width="359" height="231"/>
+        <image name="ep4-6" width="357" height="231"/>
+        <image name="ep4封面" width="121" height="134"/>
+        <image name="ep5-1" width="352" height="350"/>
+        <image name="ep5-2" width="352" height="350"/>
+        <image name="ep5-3" width="352" height="350"/>
+        <image name="ep5-4" width="352" height="350"/>
+        <image name="ep5封面" width="115" height="116"/>
+        <image name="ep6-1" width="322" height="321"/>
+        <image name="ep6-2" width="322" height="321"/>
+        <image name="ep6-3" width="323" height="319"/>
+        <image name="ep6-4" width="323" height="318"/>
+        <image name="ep6封面" width="124" height="131"/>
+        <image name="ep7-1" width="341" height="338"/>
+        <image name="ep7-2" width="342" height="338"/>
+        <image name="ep7-3" width="345" height="337"/>
+        <image name="ep7-4" width="342" height="337"/>
+        <image name="ep7封面" width="124" height="134"/>
+        <image name="ep8-1" width="349" height="343"/>
+        <image name="ep8-2" width="349" height="345"/>
+        <image name="ep8-3" width="349" height="345"/>
+        <image name="ep8-4" width="347" height="345"/>
+        <image name="ep8封面" width="112" height="116"/>
+        <image name="person.crop.square" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
